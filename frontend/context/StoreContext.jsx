@@ -53,6 +53,8 @@ const AppProvider = ({children})=>{
 
     const connectSocket = ()=>{
         const socket = io(`${backendURL}`,{
+            secure:true,
+            withCredentials:true,
             query:{
                 userId:authUser._id
             }
