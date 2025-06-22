@@ -53,12 +53,7 @@ const Navbar = () => {
             <h2 className='hidden lg:block lg:text-sm'>Logout</h2>
           </Link>
         </div>
-        <div className=''>
-          <Link className='flex items-center cursor-pointer  bg-gray-900 py-1 px-2 rounded-lg gap-1'  to='/settings'>
-            <SettingsIcon />
-            <h2 className='hidden lg:block lg:text-sm'>Settings</h2>
-          </Link>
-        </div>
+        
       
       </div>
     </div>

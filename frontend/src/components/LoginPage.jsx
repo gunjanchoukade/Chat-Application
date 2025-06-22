@@ -1,6 +1,6 @@
 import {  Lock, Mail, MessageSquare, User } from 'lucide-react'
 import React, { useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { AppDataContext } from '../../context/StoreContext'
 import axios from 'axios'
 import toast from 'react-hot-toast'
@@ -57,7 +57,7 @@ const LoginPage = () => {
                         className='w-full rounded-lg pl-10 p-3  outline-none' placeholder='***********'></input>
                     </div>
                     <button className='w-full mt-2 p-2 rounded-lg bg-green-800 text-white text-xl font-semibold'>Login</button>
-                    <p className='text-center'>don't have an account? <Link className='text-blue-500 underline' to='/signup'>Signup here</Link></p>
+                    <p className='text-center'>don't have an account? <NavLink className='text-blue-500 underline' to='/signup'>Signup here</NavLink></p>
                 </div>
             </form>
             

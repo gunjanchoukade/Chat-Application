@@ -19,9 +19,6 @@ const App = () => {
   
 
   useEffect(()=>{
-    if(!localStorage.getItem('token')){
-      navigate('/login')
-    }
     if(!token && localStorage.getItem('token')){
       setToken(localStorage.getItem('token'));
     }
@@ -37,11 +34,11 @@ const App = () => {
       <Navbar></Navbar>
       <div className='border-b'></div>
       <Routes>
-        <Route path='/' element={<HomePage/>}></Route>
-        <Route path='/signup' element={!authUser._id ? <SignUpPage/> : <Navigate to='/'/> }></Route>
-        <Route path='/login' element={!authUser._id ? <LoginPage/> : <Navigate to='/'/> }></Route>
+        <Route path='/' element={authUser._id ? <HomePage/> :  <Navigate to='/login'/>}></Route>
+        <Route path='/signup' element={ !authUser._id ? <SignUpPage/> : <Navigate to='/'/> }></Route>
+        <Route path='/login' element={!authUser._id ? <LoginPage/> : <Navigate to='/'/>  }></Route>
         <Route path='/settings' element={<SettingPage/>}></Route>
-        <Route path='/profile' element={authUser._id ? <ProfilePage/> :<Navigate to='/'/>}></Route>
+        <Route path='/profile' element={authUser._id ? <ProfilePage/> :<Navigate to='/login'/>}></Route>
       </Routes>
       <Toaster/>
     </div>
