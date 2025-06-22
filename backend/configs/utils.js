@@ -5,8 +5,8 @@ const generateToken = async (userId,res)=> {
     res.cookie('token',token,{
         maxAge:7 * 24 * 60 * 60 * 1000,
         httpOnly: true,       // cookie can't be accessed via JavaScript
-        secure: false,         // cookie sent only on HTTPS
-        sameSite: "Lax"
+        secure: true,         // cookie sent only on HTTPS
+        sameSite: "none"
     });
     return token;
 }
