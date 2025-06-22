@@ -12,7 +12,7 @@ dotenv.config()
 
 
 app.use(cors({
-    origin:["http://localhost:5173","chat-application-frontend-tan.vercel.app"],
+    origin:["http://localhost:5173","https://chat-application-frontend-tan.vercel.app"],
     credentials:true
 }))
 
