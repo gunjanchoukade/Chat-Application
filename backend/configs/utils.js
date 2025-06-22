@@ -6,7 +6,7 @@ const generateToken = async (userId,res)=> {
         maxAge:7 * 24 * 60 * 60 * 1000,
         httpOnly: true,       // cookie can't be accessed via JavaScript
         secure: true,         // cookie sent only on HTTPS
-        sameSite: "none"
+        sameSite: "None"
     });
     return token;
 }
