@@ -57,13 +57,13 @@ const FooterInput = () => {
                 <XCircleIcon onClick={()=>setSelectedImage(null)} className='absolute top-2 left-20 bottom-2 bg-black rounded-full'/> 
             </div>
         )}
-        <div className='flex items-center  px-2 lg:relative '>
+        <div className={`flex items-center`}>
             <input type="text" onChange={(e)=>setText(e.target.value)} value={text} className='w-full bg-gray-800 p-2 rounded-lg border-2 border-gray-400 text-white text-wrap lg:pr-20' placeholder='type your message..'/>
-            <label htmlFor="selectMedia" className='mx-2 lg:absolute lg:right-12 lg:bottom-2'>
+            <label htmlFor="selectMedia" className='mx-2 '>
                 <Image />
             </label>
             <input id='selectMedia' onChange={handleImageChange} type="file"  accept='image/*' hidden/>
-            <button onClick={sendMessage} className='lg:absolute lg:right-4 lg:bottom-2'><Send/></button>
+            <button onClick={sendMessage} className=''><Send/></button>
         </div>
     </div>
   )
